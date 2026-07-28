@@ -1,0 +1,39 @@
+{
+    "conditions": {
+        "applications": {
+            "excludeApplications": [
+                "Microsoft Rights Management Services"
+            ],
+            "includeApplications": [
+                "All"
+            ],
+            "includeUserActions": []
+        },
+        "clientAppTypes": [
+            "all"
+        ],
+        "signInRiskLevels": [],
+        "userRiskLevels": [],
+        "users": {
+            "excludeRoles": [],
+            "includeGuestsOrExternalUsers": {
+                "externalTenants": {
+                    "membershipKind": "all",
+                    "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants"
+                },
+                "guestOrExternalUserTypes": "internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider"
+            },
+            "includeRoles": []
+        }
+    },
+    "displayName": "BASE - 002 - Require MFA for External users Except AIP",
+    "grantControls": {
+        "builtInControls": [
+            "mfa"
+        ],
+        "customAuthenticationFactors": [],
+        "operator": "OR",
+        "termsOfUse": []
+    },
+    "state": "enabledForReportingButNotEnforced"
+}

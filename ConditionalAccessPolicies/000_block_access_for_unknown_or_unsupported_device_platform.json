@@ -1,0 +1,43 @@
+{
+    "conditions": {
+        "applications": {
+            "excludeApplications": [],
+            "includeApplications": [
+                "All"
+            ],
+            "includeUserActions": []
+        },
+        "clientAppTypes": [
+            "all"
+        ],
+        "platforms": {
+            "excludePlatforms": [
+                "android",
+                "ios",
+                "windows",
+                "macOS",
+                "linux"
+            ],
+            "includePlatforms": [
+                "all"
+            ]
+        },
+        "signInRiskLevels": [],
+        "userRiskLevels": [],
+        "users": {
+            "excludeRoles": [],
+            "includeRoles": [],
+            "includeUsers": []
+        }
+    },
+    "displayName": "BASE - 000 - Block access for Unknown or UnSupported Device Platform",
+    "grantControls": {
+        "builtInControls": [
+            "block"
+        ],
+        "customAuthenticationFactors": [],
+        "operator": "OR",
+        "termsOfUse": []
+    },
+    "state": "enabledForReportingButNotEnforced"
+}

@@ -1,0 +1,50 @@
+{
+    "conditions": {
+        "applications": {
+            "excludeApplications": [],
+            "includeApplications": [
+                "All"
+            ],
+            "includeUserActions": []
+        },
+        "clientAppTypes": [
+            "all"
+        ],
+        "signInRiskLevels": [],
+        "userRiskLevels": [],
+        "users": {
+            "excludeGuestsOrExternalUsers": {
+                "externalTenants": {
+                    "membershipKind": "all",
+                    "@odata.type": "#microsoft.graph.conditionalAccessAllExternalTenants"
+                },
+                "guestOrExternalUserTypes": "internalGuest, b2bCollaborationGuest, b2bCollaborationMember, b2bDirectConnectUser, otherExternalUser, serviceProvider"
+            },
+            "excludeRoles": [],
+            "includeRoles": [],
+            "includeUsers": [
+                "All"
+            ]
+        }
+    },
+    "displayName": "BASE - 001 - Require Internal MFA and Sign-In Frequency",
+    "grantControls": {
+        "builtInControls": [
+            "mfa"
+        ],
+        "customAuthenticationFactors": [],
+        "operator": "OR",
+        "termsOfUse": []
+    },
+    "sessionControls": {
+        "signInFrequency": {
+            "authenticationType": "primaryAndSecondaryAuthentication",
+            "frequencyInterval": "timeBased",
+            "type": "days",
+            "value": 14,
+            "isEnabled": true,
+            "@odata.type": "microsoft.graph.signInFrequencySessionControl"
+        }
+    },
+    "state": "enabledForReportingButNotEnforced"
+}

@@ -1,0 +1,42 @@
+{
+    "conditions": {
+        "applications": {
+            "excludeApplications": [
+                "Microsoft Intune"
+            ],
+            "includeApplications": [
+                "All"
+            ],
+            "includeUserActions": []
+        },
+        "clientAppTypes": [
+            "exchangeActiveSync",
+            "other"
+        ],
+        "platforms": {
+            "excludePlatforms": [],
+            "includePlatforms": [
+                "all"
+            ]
+        },
+        "signInRiskLevels": [],
+        "userRiskLevels": [],
+        "users": {
+            "excludeRoles": [],
+            "includeRoles": [],
+            "includeUsers": [
+                "All"
+            ]
+        }
+    },
+    "displayName": "BASE - 003 - Block Legacy Auth",
+    "grantControls": {
+        "builtInControls": [
+            "block"
+        ],
+        "customAuthenticationFactors": [],
+        "operator": "OR",
+        "termsOfUse": []
+    },
+    "state": "enabledForReportingButNotEnforced"
+}
